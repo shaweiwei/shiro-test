@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">  
+    
+    <!--diskStore：缓存数据持久化的目录地址,该元素是可选的，非必须的。
+    	对于任何缓存，如果你已经激活了overflowToDisk或diskPersistent，就要配置磁盘存储器。
+    	DiskStore中驱除元素跟MemoryStore中驱除元素的规则是不一样的。当往DiskStore中添加元素且此时DiskStore中的容量
+    	已经超出限制时将采用LFU（最不常用）驱除规则将对应的元素进行删除，而且该驱除规则是不可配置的（通过cache中的diskExpiryThreadIntervalSeconds属性完成
+    	path属性如果是下述Java系统属性之一，他将会被运行中的VM中的值替换。为了向后兼容，这些应该被特别规定，而不会被${token}替换语法封闭。
+		path属性可以配置的目录有：
+    		user.home（用户的家目录）
+    		user.dir（用户当前的工作目录）
+    		java.io.tmpdir（默认的临时目录）
+    		ehcache.disk.store.dir（ehcache的配置目录）
+   		 绝对路径（如：d:\\ehcache）
+		子目录的话可以这样指定：user.home/ehcache
+    -->  
+    <diskStore path="user.home" />  
+    
+    <!--  
+       name:缓存名称。  
+       maxElementsInMemory：缓存最大个数。  
+       eternal:对象是否永久有效，一但设置了，timeout将不起作用。  
+       timeToIdleSeconds：设置对象在失效前的允许闲置时间（单位：秒）。仅当eternal=false对象不是永久有效时使用，可选属性，默认值是0，也就是可闲置时间无穷大。在一直不访问这个对象的前提下，这个对象可以在cache中的存活时间。  
+       timeToLiveSeconds：设置对象在失效前允许存活时间（单位：秒）。最大时间介于创建时间和失效时间之间。仅当eternal=false对象不是永久有效时使用，默认是0.，也就是对象存活时间无穷大。 无论对象访问或是不访问(闲置),这个对象在cache中的存活时间。
+ 
+       overflowToDisk：当内存中对象数量达到maxElementsInMemory时，Ehcache将会对象写到磁盘中。  
+       diskSpoolBufferSizeMB：这个参数设置DiskStore（磁盘缓存）的缓存区大小。默认是30MB。每个Cache都应该有自己的一个缓冲区。  
+       maxElementsOnDisk：硬盘最大缓存个数。  
+       diskPersistent：是否缓存虚拟机重启期数据 Whether the disk store persists between restarts of the Virtual Machine. The default value is false.  
+       diskExpiryThreadIntervalSeconds：磁盘失效线程运行时间间隔，默认是120秒。  
+       memoryStoreEvictionPolicy：当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。默认策略是LRU（最近最少使用）。你可以设置为FIFO（先进先出）或是LFU（较少使用）。  
+       clearOnFlush：内存数量最大时是否清除。  
+    -->  
+    
+    <!-- <defaultCache   
+        maxElementsInMemory="10000"   
+        maxElementsOnDisk="10000000"  
+        eternal="false"   
+        overflowToDisk="true"
+        diskPersistent="false"  
+        timeToIdleSeconds="120"  
+        timeToLiveSeconds="120"   
+        diskExpiryThreadIntervalSeconds="120"  
+        memoryStoreEvictionPolicy="LRU">  
+    </defaultCache>   -->
+    
+    <cache name="authorizationCache"
+           maxEntriesLocalHeap="2000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+           statistics="true">
+    </cache>
+
+    <cache name="authenticationCache"
+           maxEntriesLocalHeap="2000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+           statistics="true">
+    </cache>
+
+    <cache name="shiro-activeSessionCache"
+           maxEntriesLocalHeap="2000"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="0"
+           overflowToDisk="false"
+           statistics="true">
+    </cache>
+    
+</ehcache> 
