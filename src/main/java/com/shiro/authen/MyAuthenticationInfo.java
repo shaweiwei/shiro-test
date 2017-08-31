@@ -1,4 +1,4 @@
-package com.shiro;
+package com.shiro.authen;
 
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.subject.PrincipalCollection;
