@@ -28,7 +28,7 @@ import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.util.SimpleByteSource;
 import org.junit.Test;
 
-import com.shiro.MyAuthenticationInfo;
+import com.shiro.authen.MyAuthenticationInfo;
 import com.shiro.context.Config;
 import com.shiro.dao.impl.UserDaoImpl;
 import com.shiro.entity.UserInfo;

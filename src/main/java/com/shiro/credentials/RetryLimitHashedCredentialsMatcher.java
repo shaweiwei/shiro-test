@@ -9,7 +9,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCache;
 
-import com.shiro.MyAuthenticationInfo;
+import com.shiro.authen.MyAuthenticationInfo;
 import com.shiro.context.Config;
 import com.shiro.entity.UserInfo;
 import com.shiro.service.UserService;
