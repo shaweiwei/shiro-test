@@ -22,7 +22,7 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.Factory;
 import org.junit.Test;
 
-import com.shiro.context.Config;
+import com.shiro.config.Config;
 import com.shiro.dao.impl.UserDaoImpl;
 import com.shiro.ehcache.factory.SharedEhCacheManagerFactory;
 import com.shiro.exception.MyException;

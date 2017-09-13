@@ -1,4 +1,4 @@
-package com.shiro.context;
+package com.shiro.config;
 
 import org.apache.shiro.codec.Base64;
 

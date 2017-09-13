@@ -5,7 +5,7 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 
-import com.shiro.context.Config;
+import com.shiro.config.Config;
 import com.shiro.util.CryptographyUtil;
 
 /** 

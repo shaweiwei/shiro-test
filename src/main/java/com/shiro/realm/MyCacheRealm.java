@@ -16,7 +16,7 @@ import org.apache.shiro.authz.permission.WildcardPermission;
 import org.apache.shiro.realm.CachingRealm;
 import org.apache.shiro.subject.SimplePrincipalMap;
 
-import com.shiro.context.Config;
+import com.shiro.config.Config;
 import com.shiro.entity.UserInfo;
 import com.shiro.exception.MyException;
 import com.shiro.util.CryptographyUtil;

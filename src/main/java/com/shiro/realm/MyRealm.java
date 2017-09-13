@@ -29,7 +29,7 @@ import org.apache.shiro.util.SimpleByteSource;
 import org.junit.Test;
 
 import com.shiro.authen.MyAuthenticationInfo;
-import com.shiro.context.Config;
+import com.shiro.config.Config;
 import com.shiro.dao.impl.UserDaoImpl;
 import com.shiro.entity.UserInfo;
 import com.shiro.entity.UserRolePermission;
